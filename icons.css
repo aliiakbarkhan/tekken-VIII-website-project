@@ -1,148 +1,118 @@
-body{
+/* styles.css */
+
+body {
 	font-family: 'Oswald', sans-serif;
 	background-color: #212121;
-	section{
-		width: 90%;
-		max-width: 1200px;
-		margin: 0 auto;
-		.row{
-			align-items: center;
-    	height: 100vh;
-		}
-	}
-}
-.card{
+	margin: 0;
+  }
+  
+  section {
+	width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+  }
+  
+  .row {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr); /* 6 columns */
+	gap: 20px; /* space between cards */
+  }
+  
+  .card {
 	position: relative;
-	height: 400px;
-	width: 100%;
-	margin: 10px 0;
-	transition: ease all $transition-time;
+	width: 100%; /* Takes the full width of each grid column */
+	padding-top: 100%; /* Sets height equal to width for a square shape */
+	transition: 0.3s ease;
 	perspective: 1200px;
-	&:hover{
-		.cover{
-			transform: rotateX(0deg) rotateY(-180deg);
-			&:before{
-				transform: translateZ(30px);
-			}
-			&:after{
-				background-color: black;
-			}
-			h1{
-				transform: translateZ(100px);
-			}
-			.price{
-				transform: translateZ(60px);
-			}
-			a{
-				transform: translateZ(-60px) rotatey(-180deg);
-			}
-		}
-	}
-	
-	.cover{
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		transform-style: preserve-3d;
-  	transition: ease all $transition-time;
-		background-size: cover;
-		background-position: center center;
-		background-repeat: no-repeat;
-		&:before{
-			content: '';
-			position: absolute;
-			border: 5px solid rgba(255,255,255,.5);
-			box-shadow: 0 0 12px rgba(0,0,0,.3); 
-			top:20px;
-			left:20px;
-			right:20px;
-			bottom:20px;
-			z-index: 2;
-			transition: ease all $transition-time;
-			transform-style: preserve-3d;
-			transform: translateZ(0px);
-		}
-		&:after{
-			content: '';
-			position: absolute;
-			top:0px;
-			left:0px;
-			right:0px;
-			bottom:0px;
-			z-index: 2;
-			transition: ease all 1.3s;
-			background: rgba(0,0,0,.4);
-		}
-		&.item-a{
-			background-image: url("tekken-8-3840x2160-21575.jpg");
-		}
-		&.item-b{
-			background-image: url("tekken-8-3840x2160-21580.jpg");
-		}
-		&.item-c{
-			background-image: url("tekken-8-3840x2160-21581.jpg");
-		}
-        &.item-d{
-			background-image: url("tekken-8-3840x2160-21583.jpg");
-		}
-        &.item-e{
-			background-image: url("yoshimitsu-wallpaper-3840x2160-21592.jpg");
-		}
-        &.item-f{
-			background-image: url("tekken-8-3840x2160-21598.jpg");
-		}
-		h1{
-			font-weight: 600;
-			position: absolute;
-			bottom: 55px;
-			left: 50px;
-			color: white;
-			transform-style: preserve-3d;
-  		transition: ease all $transition-time;
-			z-index:3;
-			font-size: 3em;
-			transform: translateZ(0px);
-		}
-		.price{
-			font-weight: 200;
-			position: absolute;
-			top: 55px;
-			right: 50px;
-			color: white;
-			transform-style: preserve-3d;
-  		transition: ease all $transition-time;
-			z-index:4;
-			font-size: 2em;
-			transform: translateZ(0px);
-		}
-	}
-	.card-back{
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		background: #0b0f08;
-		transform-style: preserve-3d;
-  	transition: ease all $transition-time;
-		transform: translateZ(-1px);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		a{
-			transform-style: preserve-3d;
-			transition: ease transform $transition-time, ease background .5s;
-			transform: translateZ(-1px) rotatey(-180deg);
-			background: transparent;
-			border: 1px solid white;
-			font-weight: 200;
-			font-size: 1.3em;
-			color: white;
-			padding: 14px 32px;
-			outline: none;
-			text-decoration: none;
-			&:hover{
-				background-color: white;
-				color: #0b0f08;
-			}
-		}
-	}
-}
+  }
+  
+  .card:hover .cover {
+	transform: rotateX(0deg) rotateY(-180deg);
+  }
+  
+  .cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	transform-style: preserve-3d;
+	transition: 0.3s ease;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+  }
+  
+  .cover:before,
+  .cover:after {
+	content: '';
+	position: absolute;
+	transition: 0.3s ease;
+  }
+  
+  .cover:before {
+	border: 5px solid rgba(255, 255, 255, 0.5);
+	box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+	top: 10px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	z-index: 2;
+  }
+  
+  .cover:after {
+	background: rgba(0, 0, 0, 0.4);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
+  }
+  
+  .cover h1,
+  .cover .price {
+	position: absolute;
+	color: white;
+	z-index: 3;
+  }
+  
+  .cover h1 {
+	bottom: 15%;
+	left: 10%;
+	font-weight: 600;
+	font-size: 1.5em;
+  }
+  
+  .cover .price {
+	top: 10%;
+	right: 10%;
+	font-weight: 200;
+	font-size: 1.2em;
+  }
+  
+  /* Background images for each item */
+  .item-a { background-image: url("assets/character icons/1.jpeg"); }
+  .item-b { background-image: url("assets/character icons/2.jpeg"); }
+  .item-c { background-image: url("assets/character icons/3.jpeg"); }
+  .item-d { background-image: url("assets/character icons/4.jpeg"); }
+  .item-e { background-image: url("assets/character icons/5.jpeg"); }
+  .item-f { background-image: url("assets/character icons/6.jpeg"); }
+  .item-g { background-image: url("assets/character icons/7.jpeg"); }
+  .item-h { background-image: url("assets/character icons/8.jpeg"); }
+  .item-i { background-image: url("assets/character icons/9.jpeg"); }
+  .item-j { background-image: url("assets/character icons/10.jpeg"); }
+  .item-k{ background-image: url("assets/character icons/11.jpeg"); }
+  .item-l{ background-image: url("assets/character icons/12.jpeg"); }
+  .item-13{ background-image: url("assets/character icons/13.jpeg"); }
+  .item-14{ background-image: url("assets/character icons/14.jpeg"); }
+  .item-15{ background-image: url("assets/character icons/15.jpeg"); }
+  .item-16{ background-image: url("assets/character icons/16.jpeg"); }
+  .item-18{ background-image: url("assets/character icons/17.jpeg"); }
+  .item-17{ background-image: url("assets/character icons/18.jpeg"); }
+  .item-19{ background-image: url("assets/character icons/19.jpeg"); }
+  .item-20{ background-image: url("assets/character icons/20.jpeg"); }
+  .item-21{ background-image: url("assets/character icons/21.jpeg"); }
+  .item-22{ background-image: url("assets/character icons/22.jpeg"); }
+  .item-23{ background-image: url("assets/character icons/23.jpeg"); }
+  .item-24{ background-image: url("assets/character icons/24.jpeg"); }
+  .item-25{ background-image: url("assets/character icons/25.jpeg"); }
