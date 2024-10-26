@@ -152,6 +152,104 @@
     filter: blur(5px);
   }
 </style>
+<style>
+  /* General Footer Styling */
+  footer {
+    background-color: #000000;
+    color: #fff;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .footer-about,
+  .footer-links,
+  .footer-contact,
+  .footer-social {
+    flex: 1 1 200px;
+    margin: 20px;
+  }
+
+  /* About Us and Contact Info */
+  .footer-about p,
+  .footer-contact p {
+    font-size: 0.9em;
+    color: #ccc;
+  }
+
+  /* Quick Links Styling */
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-links li {
+    margin: 10px 0;
+  }
+
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+
+  /* Contact Form Styling */
+  .footer-contact input,
+  .footer-contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  .footer-contact button {
+    padding: 10px 20px;
+    background-color: #ff4c4c;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  .footer-contact button:hover {
+    background-color: #e14343;
+  }
+
+  /* Social Media Icons */
+  .footer-social .social-icons a {
+    margin: 0 8px;
+    display: inline-block;
+  }
+
+  .footer-social .social-icons img {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Bottom Footer Text */
+  .footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 0.8em;
+    color: #999;
+  }
+</style>
 <title>Tekken 8 | Ali Akbar Khan</title>
 <link rel="icon" href="assets/logo/Tekken_8_Logo.webp"
           type="video/x-icon">
@@ -417,7 +515,7 @@
         MAPS
       </h1>
       <div class="image-container">
-        <img src="assets/maps/new-tekken-8-stage-preview-images-available-during-cnt-v0-e0zs34ec905b1.jpg" ><hr>
+        <img src="assets/maps/new-tekken-8-stage-preview-images-available-during-cnt-v0-e0zs34ec905b1.jpg" >
         <img src="assets/maps/new-tekken-8-stage-preview-images-available-during-cnt-v0-fgj9h4ec905b1.jpg" >
         <img src="assets/maps/new-tekken-8-stage-preview-images-available-during-cnt-v0-m03j34ec905b1.jpg" >
         <img src="assets/maps/new-tekken-8-stage-preview-images-available-during-cnt-v0-qsdml4ec905b1.jpg" >
@@ -456,10 +554,49 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-        <div class="d-grid gap-2 col-2 mx-auto">
-          <button class="btn btn-success" type="button">Log in</button>
-          <button class="btn btn-danger" type="button">Sing up</button>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-about">
+            <h2>About Ali Akbar Khan</h2>
+            <p>I am dedicated to bringing you the best content and services. Stay tuned for updates and more!</p>
+          </div>
+    
+          <div class="footer-links">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="https://github.com/aliiakbarkhan">Github</a></li>
+              <li><a href="www.linkedin.com/in/aliakbar-khan">Linkedin</a></li>
+              <li><a href="https://www.figma.com/@800fd7ee_6032_4">Figma</a></li>
+              <li><a href="https://www.behance.net/aliakbarkhan1">Behance</a></li>
+            </ul>
+          </div>
+    
+          <div class="footer-contact">
+            <h2>Contact Me</h2>
+            <p>Have questions? Feel free to reach out!</p>
+            <form action="#" method="post">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="message" placeholder="Your Message" required></textarea>
+              <button type="submit">Send</button>
+            </form>
+          </div>
+    
+          <div class="footer-social">
+            <h2>Follow Us</h2>
+            <div class="social-icons">
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/800px-2021_Facebook_icon.svg.png" alt="Facebook"></a>
+              <a href="#"><img src="https://www.iconpacks.net/icons/2/free-twitter-logo-icon-2429-thumb.png" alt="Twitter"></a>
+              <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/1200px-Instagram_icon.png" alt="Instagram"></a>
+              <a href="#"><img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/circle-linkedin-512.png" alt="LinkedIn"></a>
+            </div>
+          </div>
         </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; Ali Akbar Khan's Website. All rights reserved.</p>
+        </div>
+      </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <br>
 

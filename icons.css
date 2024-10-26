@@ -24,10 +24,11 @@ body {
 	padding-top: 100%; /* Sets height equal to width for a square shape */
 	transition: 0.3s ease;
 	perspective: 1200px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Initial subtle shadow */
   }
   
-  .card:hover .cover {
-	transform: rotateX(0deg) rotateY(-180deg);
+  .card:hover {
+	box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.6); /* Red glow on hover */
   }
   
   .cover {
@@ -36,11 +37,10 @@ body {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	transform-style: preserve-3d;
-	transition: 0.3s ease;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	transition: 0.3s ease;
   }
   
   .cover:before,
@@ -89,7 +89,6 @@ body {
 	font-weight: 200;
 	font-size: 1.2em;
   }
-  
   /* Background images for each item */
   .item-a { background-image: url("assets/character icons/1.jpeg"); }
   .item-b { background-image: url("assets/character icons/2.jpeg"); }
