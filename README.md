@@ -1,5 +1,8 @@
 # 🎮 Tekken 8 Website Revamp: Level Up Your Experience 🔥
 
+## All Rights Reserved.
+This repository and its contents are copyrighted. No part of this repository may be reproduced, distributed, or used without explicit permission from the owner.
+
 https://github.com/user-attachments/assets/24fb3ed8-9a38-49f7-a878-949c75467716
 
 Welcome to the **Tekken 8 Website Revamp**—where style meets epic gaming! 🌟
